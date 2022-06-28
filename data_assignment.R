@@ -314,3 +314,174 @@ summary(model)
 
 hist(kharif2$gdp, col='blue', main='Rabi')
 cor(kharif2$tap,kharif2$v37)
+                                   
+# project code
+
+add <- read.csv("C:/Users/dahuj/Downloads/add.csv")
+data <- read.csv("C:/Users/dahuj/Downloads/final1.csv")
+
+write.csv(data,"C:/Users/dahuj/Downloads/project.csv")
+
+View(add)
+View(data)
+
+data$toilet = NA
+data$ntoilet = NA
+
+for(i in 1:36) {
+  for(j in 1:70572) {
+    if(!(is.na(add[i,2]))) {
+      if(!(is.na(data[j,4]))) {
+        if(add[i,2]==data[j,4]) {
+          data[j,74]=add[i,4]
+          data[j,79]=add[i,3]
+        }
+      }
+    }
+  }
+}
+
+for(i in 1:70572) {
+  if(data[i,4]=="Andaman And Nicobar Islands") {
+    data[i,74]=100
+    data[i,79]=37359
+  }
+  if(data[i,4]=="Delhi") {
+    data[i,74]=82.3
+    data[i,79]=8231129
+  }
+  if(data[i,4]=="Jammu And Kashmir") {
+    data[i,74]=100
+    data[i,79]=1448584
+  }
+  if(data[i,4]=="Ladakh") {
+    data[i,74]=100
+    data[i,79]=21909
+  }
+  if(data[i,4]=="The Dadra And Nagar Haveli And Daman And Diu") {
+    data[i,74]=100
+    data[i,79]=35049
+  }
+}
+
+for(i in 1:70572) {
+  if(length(data[i,73])==0) {data[i,73]=1}
+}
+
+cor(data$ntoilet,data$v36, use="pairwise.complete.obs")
+
+data$lr <- log(as.numeric(data$rain))
+
+data$lgdp <- log(data$gdp)
+
+data$lv34 <- log(data$v34)
+
+data$lbeds <- log(data$beds)
+
+kharif_data <- subset(data,data$season=="Kharif")
+rabi_data <- subset(data,data$season=="Rabi")
+
+View(kharif_data)
+
+model12 <- lm(v36 ~ lgdp + tap + lbeds + v37 + v16 + v21 + v28 + v46 + lv34 + toilet + lr,data = data)
+summary(model12)
+
+model12 <- lm(v36 ~ lgdp + tap + lbeds + v37 + v16 + v21 + v28 + v46 + lv34,data = data)
+summary(model12)
+
+cor(data$v36,data$toilet, use = "pairwise.complete.obs")
+cor(data$v36,data$lr, use = "pairwise.complete.obs")
+
+View(rabi_data)
+model13 <- lm(v36 ~ lgdp + tap + lbeds + v16 + v21 + v28 + v46 + v45 + lv34 + toilet + lr,data = rabi_data)
+summary(model13)
+
+cor(data$v36,data$lv34,use = "pairwise.complete.obs")
+
+mean((data$lgdp),na.rm=TRUE)
+median((data$lgdp),na.rm=TRUE)
+sd((data$lgdp),na.rm=TRUE)
+max((main$lgdp),na.rm=TRUE)
+min((main$lgdp),na.rm=TRUE)
+
+mean((data$tap),na.rm=TRUE)
+median((data$tap),na.rm=TRUE)
+sd((data$tap),na.rm=TRUE)
+max((main$tap),na.rm=TRUE)
+min((main$tap),na.rm=TRUE)
+
+mean((data$beds),na.rm=TRUE)
+median((data$beds),na.rm=TRUE)
+sd((data$beds),na.rm=TRUE)
+max((main$beds),na.rm=TRUE)
+min((main$beds),na.rm=TRUE)
+
+mean((data$v37),na.rm=TRUE)
+median((data$v37),na.rm=TRUE)
+sd((data$v37),na.rm=TRUE)
+max((main$v37),na.rm=TRUE)
+min((main$v37),na.rm=TRUE)
+
+mean((data$v16),na.rm=TRUE)
+median((data$v16),na.rm=TRUE)
+sd((data$v16),na.rm=TRUE)
+max((main$v16),na.rm=TRUE)
+min((main$v16),na.rm=TRUE)
+
+
+mean((data$v21),na.rm=TRUE)
+median((data$v21),na.rm=TRUE)
+sd((data$v21),na.rm=TRUE)
+max((main$v21),na.rm=TRUE)
+min((main$v21),na.rm=TRUE)
+
+mean((data$v28),na.rm=TRUE)
+median((data$v28),na.rm=TRUE)
+sd((data$v28),na.rm=TRUE)
+max((main$v28),na.rm=TRUE)
+min((main$v28),na.rm=TRUE)
+
+mean((data$v46),na.rm=TRUE)
+median((data$v46),na.rm=TRUE)
+sd((data$v46),na.rm=TRUE)
+max((main$v46),na.rm=TRUE)
+min((main$v46),na.rm=TRUE)
+
+mean((data$v34),na.rm=TRUE)
+median((data$v34),na.rm=TRUE)
+sd((data$v34),na.rm=TRUE)
+max((main$v34),na.rm=TRUE)
+min((main$v34),na.rm=TRUE)
+
+mean((data$toilet),na.rm=TRUE)
+median((data$toilet),na.rm=TRUE)
+sd((data$toilet),na.rm=TRUE)
+max((main$toilet),na.rm=TRUE)
+min((main$toilet),na.rm=TRUE)
+
+mean((data$rain),na.rm=TRUE)
+median((data$rain),na.rm=TRUE)
+sd((data$rain),na.rm=TRUE)
+max((main$rain),na.rm=TRUE)
+min((main$rain),na.rm=TRUE)
+
+library(car)
+nullhyp <- c("toilet")
+linearHypothesis(model12,nullhyp)
+
+library(car)
+nullhyp <- c("lr")
+linearHypothesis(model12,nullhyp)
+
+model1 <- lm(v36 ~ lgdp + tap + lbeds + v37 + v16 + v21 + v28 + v46 + lv34 + toilet + lr,data = data, na.action = na.exclude)
+summary(model1)
+
+na.omit(model2)
+
+model2 <- lm(v36 ~ lgdp + tap + lbeds + v37 + v16 + v21 + v28 + v46 + lv34 ,data = data, na.action = na.exclude)
+summary(model2)
+
+na.omit(model1)
+
+anova(model1,model2)
+
