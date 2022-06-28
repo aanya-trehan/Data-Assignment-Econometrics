@@ -12,6 +12,17 @@ Does rainfall and percentage of toilets have an effect on Percentage of children
 
 <br />
 
+## Steps followed in Project
+- Model Creation : We first theoretically researched and decided the independent variables in
+our model
+- Conducted Model Analysis
+- Researched intensively to select creative variables
+- Calculated Correlations
+- Found out the regression and interpreted the results
+- Came up with relevant policy suggestions
+
+<br />
+
 ## About the Project
 Our model-
 <img src="https://github.com/diyaahuja/Data-Assignment-Econometrics/blob/main/images/equation.jpg" align="left" style="width: 100%" />
@@ -30,3 +41,12 @@ Our model-
 | v28       | Percentage of<br>newborns having<br>weight less than<br>2.5 kg                                                           | Children born with low birth weight, that is less than 2.5 kg are at<br>a significant risk of developing diseases like measles in upcoming<br>years                                                                                                                                                                                                                                   |
 | v46       | Percentage of<br>infant deaths due<br>to Measles (to total<br>reported<br>infant deaths)                                 | Measles can be fatal in people of all ages. However, complications<br>are more likely in children under the age of five and adults over<br>the age of twenty. Ear infections and diarrhea are common<br>complications. Pneumonia and encephalitis are serious<br>complications.                                                                                                       |
 | v21       | Percentage of women<br>received a postpartum<br>checkup or PostNatal Care between<br>48 hours to 14 days of<br>delivery. | After birth, women and infants require assistance and close<br>supervision. Mothers usually take their newborns along with<br>them to their postpartum checkups. According to WHO, the<br>majority of mother and baby fatalities occur within the first<br>six weeks following delivery.                                                                                              |
+
+<br />
+##Data Analysis done using
+- 40+ Histograms and scatter plots
+- Hypothesis Testing using F-Test and T-Test
+- Monto Carlo Simulations
+- Measures of Central Tendancies using Mean, Media and Mode
+- Correlation between variables 
+- Linear Regression Analysis
