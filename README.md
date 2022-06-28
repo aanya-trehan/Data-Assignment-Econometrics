@@ -28,6 +28,18 @@ Our model-
 <img src="https://github.com/diyaahuja/Data-Assignment-Econometrics/blob/main/images/equation.jpg" align="left" style="width: 100%" />
 
 
+<br />
+
+## Data Analysis done using
+- 40+ Histograms and scatter plots
+- Hypothesis Testing using F-Test and T-Test
+- Monto Carlo Simulations
+- Measures of Central Tendancies using Mean, Media and Mode
+- Correlation between variables 
+- Linear Regression Analysis
+
+<br />
+
 | Variable  | Description                                                                                                              | Reason for choosing                                                                                                                                                                                                                                                                                                                                                                   |
 |-----------|--------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | log(Gdp)  | State Wise GDP                                                                                                           | If the GDP of the state or district increases then<br>generally it is assumed(because income inequality is<br>not considered in GDP calculation) that the income of<br>the citizens of that area also increases. Consequently<br>increase in income leads to better access to<br>healthcare and basic amenities of life and hence a<br>lower chance of contracting measles.           |
@@ -42,11 +54,3 @@ Our model-
 | v46       | Percentage of<br>infant deaths due<br>to Measles (to total<br>reported<br>infant deaths)                                 | Measles can be fatal in people of all ages. However, complications<br>are more likely in children under the age of five and adults over<br>the age of twenty. Ear infections and diarrhea are common<br>complications. Pneumonia and encephalitis are serious<br>complications.                                                                                                       |
 | v21       | Percentage of women<br>received a postpartum<br>checkup or PostNatal Care between<br>48 hours to 14 days of<br>delivery. | After birth, women and infants require assistance and close<br>supervision. Mothers usually take their newborns along with<br>them to their postpartum checkups. According to WHO, the<br>majority of mother and baby fatalities occur within the first<br>six weeks following delivery.                                                                                              |
 
-<br />
-##Data Analysis done using
-- 40+ Histograms and scatter plots
-- Hypothesis Testing using F-Test and T-Test
-- Monto Carlo Simulations
-- Measures of Central Tendancies using Mean, Media and Mode
-- Correlation between variables 
-- Linear Regression Analysis
