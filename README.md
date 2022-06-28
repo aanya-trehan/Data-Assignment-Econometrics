@@ -27,7 +27,8 @@ our model
 Our model-
 <img src="https://github.com/diyaahuja/Data-Assignment-Econometrics/blob/main/images/equation.jpg" align="left" style="width: 100%" />
 
-
+<br>
+ㅤ
 <br />
 
 ## Data Analysis done using
